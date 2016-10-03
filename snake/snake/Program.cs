@@ -16,7 +16,13 @@ namespace snake
             Point p2 = new Point(2,6,'$');
              p2.Drow();
 
+            List<Point> pList = new List<Point>();
+            pList.Add  ( p1 );
+            pList.Add  ( p2 );
 
+           
+
+            
             Console.ReadLine();
         }
     }
