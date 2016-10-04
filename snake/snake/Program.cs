@@ -16,13 +16,12 @@ namespace snake
             Point p2 = new Point(2,6,'$');
              p2.Drow();
 
-            List<Point> pList = new List<Point>();
-            pList.Add  ( p1 );
-            pList.Add  ( p2 );
+            Goriz_lin line = new Goriz_lin(5,10,5,'+');
+            line.Drow();
 
-           
+            Wert_lin line1 = new Wert_lin(5, 10, 5, '+');
+            line1.Drow();
 
-            
             Console.ReadLine();
         }
     }
