@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class Goriz_lin
+    class Goriz_lin: Figur
     {
-        List<Point> pList;
-
           public Goriz_lin( int xLeft, int xRighte, int y, char sim)
         {
             pList = new List<Point>();
@@ -21,12 +19,6 @@ namespace snake
 
             }
         }
-        public void Drow()
-        {
-            foreach(Point p in pList)
-            {
-                p.Drow();
-            }
         }
     }
-}
+

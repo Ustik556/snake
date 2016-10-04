@@ -10,17 +10,18 @@ namespace snake
     {
         static void Main(string[] args)
         {
-            Point p1 = new Point(1,4,'*');
-             p1.Drow();
+            Console.SetBufferSize(80, 25);
+            Goriz_lin Up = new Goriz_lin(0,78,0,'+');
+            Up.Drow();
+            Goriz_lin Down = new Goriz_lin(0, 78, 24, '+');
+            Down.Drow();
+            Wert_lin Left = new Wert_lin(0, 24, 0, '+');
+            Left.Drow();
+            Wert_lin Righte = new Wert_lin(0, 24, 78, '+');
+            Righte.Drow();
 
-            Point p2 = new Point(2,6,'$');
-             p2.Drow();
-
-            Goriz_lin line = new Goriz_lin(5,10,5,'+');
-            line.Drow();
-
-            Wert_lin line1 = new Wert_lin(5, 10, 5, '+');
-            line1.Drow();
+            Point p = new Point(5, 5, '%');
+            p.Drow();
 
             Console.ReadLine();
         }

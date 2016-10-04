@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace snake
 {
-    class Wert_lin
+    class Wert_lin: Figur
     {
-        List<Point> pList;
-
         public Wert_lin(int Lefty, int Rihy, int x, char sim)
         {
             pList = new List<Point>();
@@ -19,13 +17,5 @@ namespace snake
                 pList.Add(p);
             }
         }
-        public void Drow()
-        {
-            foreach(Point p in pList)
-            {
-                p.Drow();
-            }
-        }
-
     }
 }
