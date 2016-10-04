@@ -31,6 +31,12 @@ namespace snake
             sim = p.sim;
 
         }
+        public void Clear()
+        {
+            sim = ' ';
+            Drow();
+
+        }
         public void Move(int offset, direction Direction)
         {
          if(Direction == direction.Right)

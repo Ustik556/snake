@@ -7,10 +7,11 @@ using System.Threading.Tasks;
 namespace snake
 {
     class Snake: Figur
-    { 
-        
+    {
+        direction Direction;
         public Snake(Point tals, int lenght, direction direction)
         {
+            Direction = direction;
             pList = new List<Point>();
             for (int i = 0; i <= lenght; i++)
             {
@@ -19,6 +20,24 @@ namespace snake
                 pList.Add(p);
 
             }
+        }
+
+        internal void Move()
+        {
+            Point tals = pList.First();
+            pList.Remove(tals);
+            Point head = GetNextPoint();
+            pList.Add(head);
+
+            tals.Clear();
+            head.Drow();
+        }
+        public Point GetNextPoint()
+        {
+            Point head = pList.Last();
+            Point nextpoint = new Point(head);
+            nextpoint.Move(1, Direction);
+            return nextpoint;
         }
     }
 }
