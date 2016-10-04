@@ -20,8 +20,8 @@ namespace snake
             Wert_lin Righte = new Wert_lin(0, 24, 78, '+');
             Righte.Drow();
 
-            Point p = new Point(4, 5, '#');
-            Snake snake = new Snake(p, 7, direction.Right);
+            Point p = new Point(4, 4, '#');
+            Snake snake = new Snake(p, 3, direction.Right);
             snake.Drow();
 
             Console.ReadLine();
