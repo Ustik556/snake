@@ -24,12 +24,17 @@ namespace snake
             Point p = new Point(4, 4, '#');
             Snake snake = new Snake(p, 3, direction.Right);
             snake.Drow();
-            for (int i = 0; i <= 50; i++)
+           
+            while(true)
             {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey();
+                    snake.KlickKey(key.Key);
+                }
+                Thread.Sleep(100);
                 snake.Move();
-                Thread.Sleep(200);
             }
-            Console.ReadLine();
         }
     }
 }

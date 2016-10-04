@@ -44,15 +44,15 @@ namespace snake
                 x = x + offset;
             } else if (Direction == direction.Left)
             {
-                x = x + offset;
+                x = x - offset;
             }
             else if (Direction == direction.Up)
             {
-                x = x + offset;
+                y = y - offset;
             }
             else if (Direction == direction.Down)
             {
-                x = x + offset;
+                y = y + offset;
             }
         }
     }
