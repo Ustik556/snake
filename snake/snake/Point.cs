@@ -24,5 +24,30 @@ namespace snake
             Console.SetCursorPosition(x, y);
             Console.Write(sim);
         }
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sim = p.sim;
+
+        }
+        public void Move(int offset, direction Direction)
+        {
+         if(Direction == direction.Right)
+            {
+                x = x + offset;
+            } else if (Direction == direction.Left)
+            {
+                x = x + offset;
+            }
+            else if (Direction == direction.Up)
+            {
+                x = x + offset;
+            }
+            else if (Direction == direction.Down)
+            {
+                x = x + offset;
+            }
+        }
     }
 }
